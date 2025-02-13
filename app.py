@@ -4,7 +4,7 @@ import os
 
 st.set_page_config(page_title="Problem Solver", page_icon="📝", layout="wide")
 
-client = st.secrets["TOGETHER_API_KEY"]
+client = Together(api_key=st.secrets["TOGETHER_API_KEY"])
 
 def get_math_prompt(equation):
     return [{
