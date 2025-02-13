@@ -1,13 +1,10 @@
 import streamlit as st
 from together import Together
-from dotenv import load_dotenv
 import os 
 
 st.set_page_config(page_title="Problem Solver", page_icon="📝", layout="wide")
 
-load_dotenv()
-
-client = Together(api_key=os.getenv("TOGETHER_API_KEY"))
+client = st.secrets["TOGETHER_API_KEY"]
 
 def get_math_prompt(equation):
     return [{
