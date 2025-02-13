@@ -1,4 +1,2 @@
 together
 streamlit
-python-dotenv
-os
